@@ -30,6 +30,7 @@
               }
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
             ]
           },
@@ -94,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ffe4640e-6d2c-496a-b8d6-ace8aea48e3b"
   }
 }

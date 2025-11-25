@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <h2>Project & Feature Highlights</h2>
+    <p class="intro">
+      I've contributed to a diverse range of projects focused on optimizing workflows, minimizing manual overhead, and strengthening data-driven decision-making.
+      While this includes only a subset of my work, they provide a high-level perspective on my contributions.
+      For each feature, you can see its high-level purpose, business value, and technical value, 
+      demonstrating how it contributes to operational efficiency and user experience.
+    </p>
+  </header>
+
+  <!-- Contact Buttons -->
+  <section class="contact">
+    <a [href]="linkedInUrl" target="_blank">
+      <button pButton type="button" label="LinkedIn Profile"></button>
+    </a>
+    <p>Contact: <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a></p>
+  </section>
+
+  <!-- Feature Dropdown -->
+  <section class="feature-selector">
+    <p-select
+      [options]="features"
+      [(ngModel)]="selectedFeature"
+      optionLabel="name"
+      placeholder="Select a feature"
+      [showClear]="true" 
+      [appendTo]="'body'">
+    </p-select>
+  </section>
+
+  <!-- Feature Details -->
+  <section *ngIf="selectedFeature" class="feature-details">
+    <h3>{{ selectedFeature.name }}</h3>
+    <p><strong>Business Value:</strong> {{ selectedFeature.businessValue }}</p>
+    <p><strong>Technical Value:</strong> {{ selectedFeature.technicalValue }}</p>
+  </section>
+</div>
